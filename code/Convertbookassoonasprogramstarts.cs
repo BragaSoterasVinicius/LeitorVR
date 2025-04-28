@@ -17,11 +17,12 @@ public class Convertbookassoonasprogramstarts : MonoBehaviour
             using (var unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
             using (var currentActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity"))
             {
-                //vamo ver se funciona
-                AndroidJavaClass javaClass = new AndroidJavaClass("MyClass");
-                javaClass.CallStatic("setContext", currentActivity);
+                //versão para teste de instância não estática
+                AndroidJavaObject javaObject = new AndroidJavaObject("MyClass");
+                javaClass.Call("setContext", currentActivity);
                 debugReader.GetComponent<TMPro.TextMeshPro>().text += pdfPath + "||" + outputDir;
-                string result = javaClass.CallStatic<string>("callConvertMethod", pdfPath, outputDir);
+
+                string result = javaClass.Call<string>("callConvertMethod", pdfPath, outputDir);
                 debugReader.GetComponent<TMPro.TextMeshPro>().text += "Method to convert pdf finished..." + result;
             }
         }
