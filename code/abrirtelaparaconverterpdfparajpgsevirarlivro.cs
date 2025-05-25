@@ -23,10 +23,12 @@ public class abrirtelaparaconverterpdfparajpgsevirarlivro : MonoBehaviour
                 string directoryPath = Path.GetDirectoryName(path);
                 //debugReader.GetComponent<TextMeshPro>().text += "Selected: " + paths[0];
                 //converter pdf para jpg
-                Convertbookassoonasprogramstarts convertbookassoonasprogramstartsInstance = GetComponent<Convertbookassoonasprogramstarts>();
+                Convertbookassoonasprogramstarts convertbookassoonasprogramstartsInstance =
+                GetComponent<Convertbookassoonasprogramstarts>();
                 //definir uma pasta para salvar as imagens, ao invés dessa estranheza de ser na pasta do livro/books/nome_do_livro
                 //path deve ser o caminho do livro, sem o nome do livro.
-                convertbookassoonasprogramstartsInstance.converterLivroParaImagensPorJava(path, directoryPath, debugReader);
+                convertbookassoonasprogramstartsInstance
+                .converterLivroParaImagensPorJava(path, directoryPath, debugReader);
                 //debugReader.GetComponent<TextMeshPro>().text += "Convertendo jpg para livro";
                 //criar livro
                 //criar páginas

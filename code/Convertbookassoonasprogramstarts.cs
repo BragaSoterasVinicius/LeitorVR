@@ -19,10 +19,11 @@ public class Convertbookassoonasprogramstarts : MonoBehaviour
             {
                 //versão para teste de instância não estática
                 AndroidJavaObject javaObject = new AndroidJavaObject("MyClass");
-                javaClass.Call("setContext", currentActivity);
-                debugReader.GetComponent<TMPro.TextMeshPro>().text += pdfPath + "||" + outputDir;
+                javaObject.CallStatic("setContext", currentActivity);
 
-                string result = javaClass.Call<string>("callConvertMethod", pdfPath, outputDir);
+                debugReader.GetComponent<TMPro.TextMeshPro>().text = "Calling converting process...";
+                debugReader.GetComponent<TMPro.TextMeshPro>().text = pdfPath + "||" + outputDir;
+                string result = javaObject.Call<string>("callConvertMethod", pdfPath, outputDir);
                 debugReader.GetComponent<TMPro.TextMeshPro>().text += "Method to convert pdf finished..." + result;
             }
         }
