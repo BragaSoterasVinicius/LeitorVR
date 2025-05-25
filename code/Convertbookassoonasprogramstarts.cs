@@ -24,7 +24,7 @@ public class Convertbookassoonasprogramstarts : MonoBehaviour
                 debugReader.GetComponent<TMPro.TextMeshPro>().text = "Calling converting process...";
                 debugReader.GetComponent<TMPro.TextMeshPro>().text = pdfPath + "||" + outputDir;
                 string result = javaObject.Call<string>("callConvertMethod", pdfPath, outputDir);
-                debugReader.GetComponent<TMPro.TextMeshPro>().text += "Method to convert pdf finished..." + result;
+                debugReader.GetComponent<TMPro.TextMeshPro>().text += "Method to convert pdf starting..." + result;
             }
         }
         catch (Exception e)
