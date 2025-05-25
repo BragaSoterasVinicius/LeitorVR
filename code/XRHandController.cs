@@ -45,7 +45,7 @@ public class XRHandController : MonoBehaviour
 
     void TryGrabObject()
     {
-        debugReader.GetComponent<TextMeshPro>().text += "Livro pego";
+        //debugReader.GetComponent<TextMeshPro>().text += "Livro pego";
         if (rayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit hit))
         {
             XRGrabInteractable interactable = hit.collider.GetComponent<XRGrabInteractable>();

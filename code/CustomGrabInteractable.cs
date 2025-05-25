@@ -11,7 +11,7 @@ public class CustomGrabInteractable : XRGrabInteractable
     public GameObject debugReader;
     protected override void OnSelectExited(SelectExitEventArgs args)
     {
-        debugReader.GetComponent<TextMeshPro>().text = "largayy";
+        //debugReader.GetComponent<TextMeshPro>().text = "largayy";
         /*
         if (pressButtonAAction.action.triggered)
         {

@@ -13,7 +13,7 @@ public class FileBrowserTest : MonoBehaviour
     {
 
         string path = "";
-        debugReader.GetComponent<TextMeshPro>().text += "Testando abertura de menu";
+        //debugReader.GetComponent<TextMeshPro>().text += "Testando abertura de menu";
         FileBrowser.SetFilters(true, new FileBrowser.Filter("Images", ".jpg", ".png"), new FileBrowser.Filter("Text Files", ".txt", ".pdf"));
         FileBrowser.SetDefaultFilter(".jpg");
         FileBrowser.ShowLoadDialog((paths) =>

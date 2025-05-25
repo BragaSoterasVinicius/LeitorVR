@@ -15,7 +15,7 @@ public class createPagesByPathAndNewBook : MonoBehaviour
     {
         Vector3 parentPosition = bookfather.transform.position;
         GameObject book = Instantiate(bookfather, parentPosition, Quaternion.identity);
-        debugReader.GetComponent<TextMeshPro>().text = "iniciando produção do livro";
+        debugReader.GetComponent<TextMeshPro>().text = "instatiating book ...";
         libpath = libpath.Replace("\\", "/");
         debugReader.GetComponent<TextMeshPro>().text += "libpath: " + libpath;
         int TotalFolderFiles = Directory.GetFiles(libpath).Length;

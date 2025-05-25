@@ -34,11 +34,11 @@ public class colinhaDeCriaQuandoPegoLivro : MonoBehaviour
     {
         if (rayInteractor != null && rayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit hit))
         {
-            debugReader.GetComponent<TextMeshPro>().text += "touched";
+            //debugReader.GetComponent<TextMeshPro>().text += "touched";
             XRGrabInteractable interactable = hit.collider.GetComponent<XRGrabInteractable>();
             if (interactable != null)
             {
-                debugReader.GetComponent<TextMeshPro>().text += "the object is interactable";
+                //debugReader.GetComponent<TextMeshPro>().text += "the object is interactable";
                 grabObject(interactable);
             }
         }
@@ -48,7 +48,7 @@ public class colinhaDeCriaQuandoPegoLivro : MonoBehaviour
     {
         if (interactable != null)
         {
-            debugReader.GetComponent<TextMeshPro>().text += "the object is interactable";
+            //debugReader.GetComponent<TextMeshPro>().text += "the object is interactable";
             directInteractor.interactionManager.SelectEnter(directInteractor, interactable);
 
             heldObject = interactable;
